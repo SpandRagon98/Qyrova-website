@@ -972,13 +972,13 @@ function Themes() {
 /* ═══════════════════════  ROLES  ═══════════════════════ */
 
 const ROLES = [
-  { Icon: Crown, title: "Owner", c: "from-rose-500 to-pink-600",
+  { Icon: Crown, title: "Owner", c: "from-rose-700 to-pink-800",
     perks: ["Full workspace control", "Manage users & roles", "All presets & data", "Personalise settings"] },
-  { Icon: Shield, title: "Admin", c: "from-violet-500 to-purple-600",
+  { Icon: Shield, title: "Admin", c: "from-pink-700 to-rose-900",
     perks: ["Manage presets", "Edit quotations", "Send & track emails", "Manage teammates"] },
-  { Icon: Edit3, title: "Editor", c: "from-sky-500 to-blue-600",
+  { Icon: Edit3, title: "Editor", c: "from-fuchsia-700 to-pink-900",
     perks: ["Create quotations", "Fill dynamic forms", "Edit quotations", "No record deletion"] },
-  { Icon: Eye, title: "Doc Viewer", c: "from-emerald-500 to-teal-600",
+  { Icon: Eye, title: "Doc Viewer", c: "from-rose-800 to-pink-950",
     perks: ["Document view access", "Personalise settings", "No quotation editing", "No team management"] },
 ];
 
