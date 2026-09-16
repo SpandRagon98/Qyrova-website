@@ -25,6 +25,6 @@ The source was extracted from the Qyrova-specific folder in the existing local p
 
 ## Design and fonts
 
-Tall condensed Anton headlines follow the user's supplied typography reference, with self-hosted DM Sans for reading text. Bright pink (#F30078), matched to the user's color swatch, pairs with white headlines, maroon reading text and deep pink-maroon sections. Font packages include their licenses; no remote Google Fonts dependency is needed.
+Tall condensed Anton headlines follow the user's supplied typography reference. Smaller website text uses self-hosted Montserrat in white, with dark-pink reading surfaces where needed on light panels. Existing heading colors, DM Sans subheadings and logo typography are retained. Bright pink (#F30078), matched to the user's color swatch, pairs with deep pink-maroon sections. Font packages include their licenses; no remote Google Fonts dependency is needed.
 
 The app is independently hosted on Cloudflare. Deploying this marketing site does not alter the app, its authentication or data storage.

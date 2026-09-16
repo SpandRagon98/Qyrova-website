@@ -32,7 +32,7 @@ export function Counter({ to, duration = 1.2, className = "" }) {
 
 export function QyrovaLogo({ size = 22, className = "" }) {
   return (
-    <span className={`inline-flex items-center gap-1.5 ${className}`}>
+    <span className={`q-logo inline-flex items-center gap-1.5 ${className}`}>
       <span
         className="grid place-items-center rounded-full bg-[var(--q-pink)] text-white"
         style={{ width: size, height: size }}
@@ -669,7 +669,7 @@ export function ThemedMiniDash({ theme }) {
       initial={{ opacity: 0, scale: 0.97 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.45, ease: "easeOut" }}
-      className={`flex overflow-hidden rounded-2xl ring-1 shadow-2xl shadow-rose-200/30 ${T.shell}`}
+      className={`q-themed-preview flex overflow-hidden rounded-2xl ring-1 shadow-2xl shadow-rose-200/30 ${T.shell}`}
     >
       <div className={`hidden sm:flex w-[120px] shrink-0 flex-col gap-1 border-r p-2.5 ${T.side}`}>
         <QyrovaLogo size={15} className={`mb-2 text-[10px] ${T.ink}`} />

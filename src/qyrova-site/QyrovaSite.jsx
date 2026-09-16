@@ -663,7 +663,7 @@ function Workflow_() {
                 <div className="relative grid h-32 w-32 place-items-center rounded-full bg-gradient-to-br from-[var(--q-pink)] to-[#a82850] shadow-2xl shadow-rose-900/60 ring-4 ring-white/10">
                   <div className="text-center text-white">
                     <Search size={26} strokeWidth={3} className="mx-auto" />
-                    <p className="mt-1 font-brand text-sm font-extrabold">Qyrova</p>
+                    <p className="q-heading mt-1 font-brand text-sm font-extrabold">Qyrova</p>
                     <p className="text-[8px] font-semibold uppercase tracking-widest text-rose-100/80">
                       Quotation engine
                     </p>
@@ -732,7 +732,7 @@ function IntegrationCard({ Icon, title, desc, c, i, inView, side }) {
         <Icon size={22} />
       </motion.span>
       <div>
-        <p className="font-brand text-[15px] font-bold text-white">{title}</p>
+        <p className="q-heading font-brand text-[15px] font-bold text-white">{title}</p>
         <p className="text-[12.5px] leading-snug text-rose-100/50">{desc}</p>
       </div>
     </motion.div>
@@ -1016,7 +1016,7 @@ function Roles() {
                 >
                   <Icon size={22} />
                 </motion.span>
-                <p className="mt-3 font-brand text-lg font-extrabold">{title}</p>
+                <p className="q-heading mt-3 font-brand text-lg font-extrabold">{title}</p>
               </div>
               <ul className="space-y-2.5 p-5">
                 {perks.map((p, pi) => (
@@ -1047,7 +1047,7 @@ function Roles() {
             [3, "Theme modes"],
           ].map(([n, l]) => (
             <motion.div key={l} whileHover={{ scale: 1.08 }} className="text-center">
-              <p className="font-brand text-5xl font-extrabold text-gradient-pink">
+              <p className="q-heading font-brand text-5xl font-extrabold text-gradient-pink">
                 <Counter to={n} duration={1.6} />
               </p>
               <p className="mt-1 text-[12.5px] font-bold uppercase tracking-wider text-neutral-400">{l}</p>
