@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Montserrat Variable", system-ui, sans-serif;
+  --font-sans: "DM Sans Variable", system-ui, sans-serif;
 }
 
 @layer base {
   *, *::before, *::after { box-sizing: border-box; }
   html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
-  body { margin: 0; font-family: "Montserrat Variable", system-ui, sans-serif; background: #f30078; color: #fff; -webkit-font-smoothing: antialiased; }
+  body { margin: 0; font-family: "DM Sans Variable", system-ui, sans-serif; background: #f8f9fc; color: #141b30; -webkit-font-smoothing: antialiased; }
   button, a { -webkit-tap-highlight-color: transparent; }
   button { cursor: pointer; }
-  a:focus-visible, button:focus-visible { outline: 3px solid #280012; outline-offset: 5px; }
-  ::selection { background: #43001f; color: white; }
+  a:focus-visible, button:focus-visible { outline: 3px solid #4a69ff; outline-offset: 5px; }
+  ::selection { background: #2042ef; color: white; }
   @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 }
