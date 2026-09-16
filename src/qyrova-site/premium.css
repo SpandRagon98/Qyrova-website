@@ -1,0 +1,72 @@
+.qyrova-site { --q-pink:#2042ef; --q-pink-deep:#1733c6; --q-ink:#141b30; --q-bg:#f8f9fc; font-family:"DM Sans Variable",system-ui,sans-serif; background:var(--q-bg); }
+.qyrova-site .font-brand { font-family:"DM Sans Variable",system-ui,sans-serif; }
+.qyrova-site h1.font-brand,.qyrova-site h2.font-brand { font-family:"Anton",Impact,sans-serif; font-weight:400; text-transform:uppercase; letter-spacing:-.025em; line-height:1.06; }
+.qyrova-site .q-hero { background:#2042ef; color:white; }
+.qyrova-site .q-hero h1 { max-width:none; font-size:clamp(3rem,10.8vw,8.8rem); color:white; }
+.qyrova-site .q-hero h1 .text-gradient-pink-animated { background:none; -webkit-text-fill-color:#d5dfff; animation:none; }
+.qyrova-site .q-hero > div > div > p { color:#e0e6ff; }
+.qyrova-site .orb,.qyrova-site .q-spark,.qyrova-site .q-dot { display:none; }
+
+body:has(.qyrova-site) { background: #f8f9fc; }
+.qyrova-site h2.font-brand { font-size: clamp(2.7rem, 5.8vw, 4.8rem); }
+.qyrova-site .orb-dark, .qyrova-site .hero-grid, .qyrova-site .q-spotlight { display: none; }
+.qyrova-site .glass-chip, .qyrova-site .glass-strong, .qyrova-site .glass-nav {
+  background: #fff; border-color: #e5e8f1; box-shadow: 0 8px 24px #15255208; backdrop-filter: none;
+}
+.qyrova-site .glass-nav { background: #fffffff0; backdrop-filter: blur(16px); }
+.qyrova-site .glass-dark, .qyrova-site .glass-dark-chip { box-shadow: none; }
+.qyrova-site .btn-primary { background: #2042ef; border-radius: .65rem; box-shadow: none; font-weight: 600; }
+.qyrova-site .btn-primary:hover { box-shadow: 0 8px 24px #2042ef26; }
+.qyrova-site .btn-ghost, .qyrova-site .btn-dark-ghost { border-radius: .65rem; box-shadow: none; }
+.qyrova-site .glow-pink { animation: none; }
+.qyrova-site .text-gradient-pink, .qyrova-site .text-gradient-pink-animated {
+  background: none; -webkit-text-fill-color: #2042ef; color: #2042ef; animation: none;
+}
+.qyrova-site .text-gradient-pink-light { background: none; -webkit-text-fill-color: #9db4ff; color: #9db4ff; }
+.qyrova-site .text-outline-pink { color: #2042ef; -webkit-text-stroke: 0; }
+.qyrova-site .q-hero { padding-top: 10.5rem; padding-bottom: 4rem; }
+.qyrova-site .q-hero h1 { font-size: clamp(3.6rem, 10.8vw, 8.8rem); line-height: 1.03; margin-top: 1.5rem; }
+.qyrova-site .q-hero h1 .text-gradient-pink-animated { -webkit-text-fill-color: #d5dfff; color: #d5dfff; }
+.qyrova-site .q-hero > div > div > p { max-width: 36rem; font-size: 1.0625rem; }
+.qyrova-site .q-hero .glass-strong { background: #ffffff0d; color: white; border-color: #ffffff38; box-shadow: none; }
+.qyrova-site .q-hero .btn-primary { background: white; color: #2042ef; }
+.qyrova-site .q-hero .btn-ghost { background: transparent; color: white; border-color: #ffffff66; }
+.qyrova-site .q-hero .glass-strong.absolute, .qyrova-site .q-hero .pointer-events-none.absolute.-top-5 { display: none; }
+.qyrova-site .q-hero .sheen-wrap { box-shadow: 0 30px 60px #102aa855; border: 1px solid #ffffff70; }
+.qyrova-site .q-mock-frame { --q-pink:#681b24; --q-ink:#242122; background:#f7f7f5; color:#242122; border-color:#eae7e3; }
+.qyrova-site .q-mock-frame .font-brand { font-family:"DM Sans Variable",system-ui,sans-serif; }
+.qyrova-site .q-hero .q-demo-label { margin: 2rem auto 0; font-size: .75rem; letter-spacing: .1em; color: #d5dfff; }
+.qyrova-site .q-site-nav:not(.q-is-scrolled) nav > a { color: white; }
+.qyrova-site .q-site-nav:not(.q-is-scrolled) nav a:not(.btn-primary) { color: #e2e8ff; }
+.qyrova-site .q-site-nav:not(.q-is-scrolled) nav .btn-primary { background: white; color: #2042ef; }
+.qyrova-site .q-site-nav:not(.q-is-scrolled) nav .glass-chip { background: #ffffff18; color: white; border-color: #ffffff45; }
+.qyrova-site #workflow, .qyrova-site section.bg-\[\#16070d\] { background: #11192e; }
+.qyrova-site #features > .grid > div > div, .qyrova-site #roles .sheen-wrap { border-radius: 1rem; box-shadow: none; }
+.qyrova-site #product > div .bg-\[\#FFF2F5\]\/90 { background: #eef1f8; }
+.qyrova-site #themes { background: #eef1f8; }
+.qyrova-site #faq .glass-strong { border-radius: .8rem; box-shadow: none; }
+.qyrova-site #faq button span.font-brand { font-size: 1rem; line-height: 1.5; }
+.qyrova-site section > div > div > p, .qyrova-site #themes p, .qyrova-site #faq p { font-size: 1rem; line-height: 1.7; }
+.qyrova-site #roles ul li { font-size: .875rem; }
+.qyrova-site .marquee-mask { background: white; border-color: #e5e8f1; padding: 1.5rem 0; }
+.qyrova-site footer { background: white; }
+.qyrova-site .text-neutral-500 { color: #62697a; }
+.qyrova-site .text-neutral-400 { color: #707789; }
+.qyrova-site .text-rose-100\/50 { color: #b6bfd3; }
+.qyrova-site .text-rose-100\/70 { color: #cad3e5; }
+.qyrova-site .text-rose-200 { color: #b8c8ff; }
+.qyrova-site .sheen-wrap::after, .qyrova-site .btn-primary::before { display: none; }
+.qyrova-site button:focus-visible, .qyrova-site a:focus-visible { outline: 3px solid #809aff; outline-offset: 5px; }
+.qyrova-site .q-site-nav a { font-size: .875rem; }
+.qyrova-site .q-hero > div > div > div.relative { animation: none; }
+@media (max-width: 640px) {
+  .qyrova-site .q-hero { padding-top: 8rem; }
+  .qyrova-site .q-hero h1 { font-size: clamp(2.85rem, 11.6vw, 4.6rem); }
+  .qyrova-site .q-hero > div > div > p { font-size: 1rem; }
+  .qyrova-site .q-hero .glass-strong.inline-flex { font-size: .75rem; letter-spacing: .02em; padding: .625rem .75rem; }
+  .qyrova-site .q-hero .q-demo-label { font-size: .75rem; }
+  .qyrova-site h2.font-brand { font-size: 2.6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .qyrova-site *, .qyrova-site *::before, .qyrova-site *::after { animation: none !important; transition: none !important; }
+}

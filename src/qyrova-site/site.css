@@ -1,0 +1,402 @@
+/* ───────────── Qyrova marketing site — brand layer ───────────── */
+
+.qyrova-site {
+  --q-pink: #e0476b;
+  --q-pink-deep: #c12e54;
+  --q-ink: #231a1e;
+  --q-bg: #fdf1f4;
+
+  font-family: "Inter", system-ui, sans-serif;
+  background:
+    radial-gradient(1200px 600px at 80% -10%, #fde4ec 0%, transparent 60%),
+    radial-gradient(900px 500px at -10% 30%, #fcebf1 0%, transparent 55%),
+    var(--q-bg);
+  color: var(--q-ink);
+}
+
+.qyrova-site .font-brand {
+  font-family: "Baloo 2", "Quicksand", system-ui, sans-serif;
+}
+
+/* override host body theme (index.css sets Unspiral cream) */
+body:has(.qyrova-site) {
+  background: var(--q-bg, #fdf1f4);
+}
+body:has(.qyrova-site)::-webkit-scrollbar-track { background: #fdf1f4; }
+body:has(.qyrova-site)::-webkit-scrollbar-thumb { background: #e0476b; }
+
+/* ───────────── glassmorphism kit ───────────── */
+
+/* light glass — chips, pills, small surfaces */
+.qyrova-site .glass-chip {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(14px) saturate(1.6);
+  -webkit-backdrop-filter: blur(14px) saturate(1.6);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 2px 10px rgba(224, 71, 107, 0.08);
+}
+
+/* strong glass — cards, toasts, browser chrome, stat band */
+.qyrova-site .glass-strong {
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(22px) saturate(1.7);
+  -webkit-backdrop-filter: blur(22px) saturate(1.7);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(224, 71, 107, 0.06),
+    0 8px 32px rgba(224, 71, 107, 0.12);
+  border-radius: 1rem;
+}
+
+/* nav glass */
+.qyrova-site .glass-nav {
+  background: rgba(255, 255, 255, 0.55);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 8px 32px rgba(224, 71, 107, 0.14);
+}
+
+/* dark glass — workflow & CTA surfaces */
+.qyrova-site .glass-dark {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 8px 28px rgba(0, 0, 0, 0.35);
+}
+.qyrova-site .glass-dark-chip {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+/* sheen sweep on hover */
+.qyrova-site .sheen-wrap { position: relative; overflow: hidden; }
+.qyrova-site .sheen-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 32%, rgba(255, 255, 255, 0.35) 50%, transparent 68%);
+  transform: translateX(-120%);
+  transition: transform 0.7s ease;
+  pointer-events: none;
+}
+.qyrova-site .sheen-wrap:hover::after { transform: translateX(120%); }
+
+/* ───────────── buttons ───────────── */
+
+.qyrova-site .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #e0476b, #c12e54);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px 22px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 4px 14px rgba(224, 71, 107, 0.35);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  position: relative;
+  overflow: hidden;
+}
+.qyrova-site .btn-primary::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(100deg, transparent 30%, rgba(255, 255, 255, 0.35) 50%, transparent 70%);
+  transform: translateX(-130%);
+  transition: transform 0.6s ease;
+}
+.qyrova-site .btn-primary:hover::before { transform: translateX(130%); }
+.qyrova-site .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.25),
+    0 8px 24px rgba(224, 71, 107, 0.5);
+}
+.qyrova-site .btn-primary:active { transform: translateY(0); }
+
+.qyrova-site .btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--q-ink);
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(14px) saturate(1.5);
+  -webkit-backdrop-filter: blur(14px) saturate(1.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9), 0 2px 10px rgba(224, 71, 107, 0.1);
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.qyrova-site .btn-ghost:hover { transform: translateY(-2px); background: rgba(255, 255, 255, 0.9); }
+
+.qyrova-site .btn-dark-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.07);
+  color: #fbd8e2;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 11px 22px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  transition: background 0.18s ease, transform 0.18s ease;
+}
+.qyrova-site .btn-dark-ghost:hover { background: rgba(255, 255, 255, 0.14); transform: translateY(-2px); }
+
+.qyrova-site .btn-lg { font-size: 15.5px; padding: 14px 28px; }
+
+.qyrova-site .glow-pink { animation: q-glow 2.6s ease-in-out infinite; }
+@keyframes q-glow {
+  0%, 100% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 4px 18px rgba(224, 71, 107, 0.35); }
+  50% { box-shadow: inset 0 1px 0 rgba(255,255,255,0.25), 0 4px 38px rgba(224, 71, 107, 0.7); }
+}
+
+/* ───────────── text styles ───────────── */
+
+.qyrova-site .text-gradient-pink {
+  background: linear-gradient(110deg, #e0476b 10%, #b3265a 55%, #8e1d6b 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.qyrova-site .text-gradient-pink-light {
+  background: linear-gradient(110deg, #ff90ab 5%, #f06292 50%, #d24bff 95%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* animated flowing gradient for the hero headline */
+.qyrova-site .text-gradient-pink-animated {
+  background: linear-gradient(110deg, #e0476b, #b3265a 25%, #d24bff 50%, #b3265a 75%, #e0476b);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: q-gradient-flow 5s linear infinite;
+}
+@keyframes q-gradient-flow {
+  from { background-position: 0% center; }
+  to { background-position: 250% center; }
+}
+
+.qyrova-site .text-outline-pink {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(224, 71, 107, 0.45);
+}
+
+/* ───────────── particles ───────────── */
+
+.qyrova-site .q-spark {
+  position: absolute;
+  color: #e0476b;
+  animation: q-float-spark linear infinite;
+}
+.qyrova-site .q-dot {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, #f48fb1, rgba(244, 143, 177, 0.2));
+  animation: q-float-spark linear infinite;
+}
+@keyframes q-float-spark {
+  0%   { transform: translateY(0) rotate(0deg) scale(1); }
+  25%  { transform: translateY(-30px) rotate(90deg) scale(1.25); }
+  50%  { transform: translateY(-12px) rotate(180deg) scale(0.85); }
+  75%  { transform: translateY(-38px) rotate(270deg) scale(1.15); }
+  100% { transform: translateY(0) rotate(360deg) scale(1); }
+}
+
+@keyframes q-twirl {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.25); }
+}
+
+/* ───────────── cursor spotlight (dark sections) ───────────── */
+
+.qyrova-site .q-spotlight {
+  position: absolute;
+  width: 560px;
+  height: 560px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(224, 71, 107, 0.14) 0%, rgba(210, 75, 255, 0.06) 40%, transparent 70%);
+  z-index: 1;
+}
+
+/* ───────────── conic rotating ring ───────────── */
+
+.qyrova-site .q-conic-ring {
+  position: absolute;
+  inset: -8px;
+  border-radius: 50%;
+  background: conic-gradient(from 0deg, transparent 0%, #ff9eb8 12%, transparent 28%, transparent 55%, #d24bff 68%, transparent 82%);
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 3px), black calc(100% - 2px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 3px), black calc(100% - 2px));
+  animation: q-spin 3.5s linear infinite;
+  pointer-events: none;
+}
+@keyframes q-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* ───────────── workflow beams ───────────── */
+
+.qyrova-site .q-beam-dash {
+  animation: q-beam-march 1.2s linear infinite;
+}
+@keyframes q-beam-march {
+  from { stroke-dashoffset: 32; }
+  to { stroke-dashoffset: 0; }
+}
+
+/* ───────────── hero ornaments ───────────── */
+
+.qyrova-site .hero-grid {
+  background-image:
+    linear-gradient(rgba(224, 71, 107, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(224, 71, 107, 0.05) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 75% 55% at 50% 35%, black 25%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 75% 55% at 50% 35%, black 25%, transparent 75%);
+  pointer-events: none;
+}
+
+.qyrova-site .orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(70px);
+  pointer-events: none;
+  animation: q-drift 16s ease-in-out infinite alternate;
+}
+.qyrova-site .orb-1 {
+  width: 480px; height: 480px; top: -140px; right: -100px;
+  background: radial-gradient(circle, rgba(244, 143, 177, 0.5), transparent 65%);
+}
+.qyrova-site .orb-2 {
+  width: 420px; height: 420px; top: 30%; left: -160px;
+  background: radial-gradient(circle, rgba(225, 110, 235, 0.28), transparent 65%);
+  animation-delay: -6s;
+}
+.qyrova-site .orb-3 {
+  width: 360px; height: 360px; bottom: -80px; right: 18%;
+  background: radial-gradient(circle, rgba(255, 183, 197, 0.45), transparent 65%);
+  animation-delay: -11s;
+}
+@keyframes q-drift {
+  from { transform: translate(0, 0) scale(1); }
+  to   { transform: translate(36px, -28px) scale(1.12); }
+}
+
+/* dark-section orbs */
+.qyrova-site .orb-dark {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  animation: q-drift 18s ease-in-out infinite alternate;
+}
+.qyrova-site .orb-d1 {
+  width: 520px; height: 520px; top: -180px; left: -120px;
+  background: radial-gradient(circle, rgba(224, 71, 107, 0.22), transparent 65%);
+}
+.qyrova-site .orb-d2 {
+  width: 460px; height: 460px; bottom: -160px; right: -100px;
+  background: radial-gradient(circle, rgba(150, 60, 220, 0.18), transparent 65%);
+  animation-delay: -8s;
+}
+.qyrova-site .orb-d3 {
+  width: 420px; height: 420px; bottom: -120px; right: 10%;
+  background: radial-gradient(circle, rgba(224, 71, 107, 0.18), transparent 65%);
+  animation-delay: -5s;
+}
+
+/* ───────────── workflow ornaments ───────────── */
+
+.qyrova-site .pulse-ring {
+  position: absolute;
+  inset: 12px;
+  border-radius: 50%;
+  border: 2px solid rgba(244, 143, 177, 0.5);
+  animation: q-pulse-ring 2.2s ease-out infinite;
+}
+@keyframes q-pulse-ring {
+  from { transform: scale(0.8); opacity: 0.9; }
+  to   { transform: scale(1.45); opacity: 0; }
+}
+
+.qyrova-site .flow-line::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent, #f06292 50%, transparent);
+  animation: q-flow 1.8s linear infinite;
+}
+@keyframes q-flow {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+/* ───────────── marquee ───────────── */
+
+.qyrova-site .marquee { animation: q-marquee 30s linear infinite; }
+.qyrova-site .marquee-rev { animation: q-marquee-rev 36s linear infinite; }
+.qyrova-site .marquee:hover,
+.qyrova-site .marquee-rev:hover { animation-play-state: paused; }
+@keyframes q-marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@keyframes q-marquee-rev {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0); }
+}
+.qyrova-site .marquee-mask {
+  mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 12%, black 88%, transparent);
+}
+
+/* ───────────── misc ───────────── */
+
+.qyrova-site ::selection {
+  background: rgba(224, 71, 107, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .qyrova-site .orb,
+  .qyrova-site .orb-dark,
+  .qyrova-site .marquee,
+  .qyrova-site .marquee-rev,
+  .qyrova-site .glow-pink,
+  .qyrova-site .pulse-ring,
+  .qyrova-site .q-spark,
+  .qyrova-site .q-dot,
+  .qyrova-site .q-conic-ring,
+  .qyrova-site .q-beam-dash,
+  .qyrova-site .text-gradient-pink-animated,
+  .qyrova-site .flow-line::after {
+    animation: none;
+  }
+}
